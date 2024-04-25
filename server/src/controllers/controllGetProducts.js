@@ -20,7 +20,7 @@ const controllGetProducts = async(req)=>{
         const productByName = await Products.findAll({
           where: {
             name: {
-              [Op.iLike]: `%${productWanted}%`,
+              [Op.iLike]: `%${productWanted}%`, 
             },
           },
         })

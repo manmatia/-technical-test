@@ -106,7 +106,7 @@ export function getProducts() {
   export function deleteProduct(id) {
     return async function (dispatch) {
       try {
-        const response = await axios.delete(`/products/${id}`);
+        const response = await axios.delete(`/${id}`);
         dispatch({
           type: DELETE_PRODUCT,
           payload: response.data,

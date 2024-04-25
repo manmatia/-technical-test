@@ -9,7 +9,7 @@ const EditProducts = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const productToEdit = useSelector((state) => state.product);
-
+console.log(productToEdit);
 
   useEffect(() => {
     dispatch(getProductsById(id));
@@ -27,23 +27,23 @@ const EditProducts = () => {
   useEffect(() => {
     if (productToEdit) {
       setFormData({
-        id: productToEdit.id || "",
-        name: productToEdit.name || "",
-        price: productToEdit.price || 0,
-        stock: productToEdit.stock || 0,
-        isFree: productToEdit.isFree || false,
-        creationTime: productToEdit.creationTime || "",
+        ...productToEdit, // Incluye todas las propiedades del producto
       });
     }
   }, [productToEdit]);
+  
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    const newValue = type === "checkbox" ? checked : value; // Si es un checkbox, usa checked, de lo contrario, usa el valor normal
+    
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: newValue,
     }));
   };
+  
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

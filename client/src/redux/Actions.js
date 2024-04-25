@@ -23,7 +23,7 @@ export function getProducts() {
     };
   }
 
-  export function getReviewById(id) {
+  export function getProductsById (id) {
     return async function (dispatch) {
       try {
         const response = await axios.get(`/${id}`);
@@ -80,22 +80,18 @@ export function getProducts() {
     id,
     name,
     price,
-    sale,
-    description,
-    series,
-    category,
-    colorImage
+    isFree,
+    stock,
+    creationTime,
   ) {
     return async function (dispatch) {
       try {
         const response = await axios.put(`/${id}`, {
           name,
           price,
-          sale,
-          description,
-          series,
-          category,
-          colorImage,
+          isFree,
+          stock,
+          creationTime,
         });
         dispatch({
           type: PUT_PRODUCTS,

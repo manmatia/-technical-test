@@ -5,12 +5,14 @@ import { getProducts, deleteProduct } from "../redux/Actions";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
 import "./Table.css";
+import Search from "./Search";
 
 const Table = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.allProducts);
  
+console.log(products)
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(8);
 
@@ -61,6 +63,7 @@ const Table = () => {
 
   return (
     <div className="tableRes">
+      <Search/>
       <div className="table-responsive">
         <table className="table table-striped">
           <thead>

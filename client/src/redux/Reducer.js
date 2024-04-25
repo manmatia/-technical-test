@@ -15,7 +15,7 @@ function rootReducer(state = initialState, action) {
     case GET_PRODUCTS_BY_ID:
       return {
         ...state,
-        products: action.payload,
+        product: action.payload,
       };
     case POST_PRODUCTS:
       return {

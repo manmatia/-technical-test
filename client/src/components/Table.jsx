@@ -54,12 +54,15 @@ const Table = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(deleteProduct(product.id));
-        Swal.fire("Delete", "The product has been removed.", "success");
-        dispatch(getProducts());
+        Swal.fire("Delete", "The product has been removed.", "success")
+          .then(() => {
+
+            window.location.reload();
+          });
+   
       }
     });
   };
-
   return (
     <div className="tableRes">
       <Search/>

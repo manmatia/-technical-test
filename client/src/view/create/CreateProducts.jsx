@@ -43,6 +43,7 @@ const CreateProduct = () => {
 
   return (
     <div className="form-container">
+      <h1> Creation form </h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

@@ -27,7 +27,7 @@ console.log(productToEdit);
   useEffect(() => {
     if (productToEdit) {
       setFormData({
-        ...productToEdit, // Incluye todas las propiedades del producto
+        ...productToEdit,
       });
     }
   }, [productToEdit]);
@@ -35,7 +35,7 @@ console.log(productToEdit);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    const newValue = type === "checkbox" ? checked : value; // Si es un checkbox, usa checked, de lo contrario, usa el valor normal
+    const newValue = type === "checkbox" ? checked : value; 
     
     setFormData((prevData) => ({
       ...prevData,
@@ -57,7 +57,7 @@ console.log(productToEdit);
 
     dispatch(editProducts(id, name, price, isFree, stock, creationTime))
         .then(() => {
-            // Muestra la alerta de éxito
+           
             Swal.fire({
                 icon: 'success',
                 title: 'Producto editado correctamente',
@@ -65,7 +65,7 @@ console.log(productToEdit);
                 confirmButtonText: 'OK',
             });
 
-            // Realiza acciones adicionales si es necesario
+
             console.log("Producto editado correctamente");
         })
         .catch((error) => {
@@ -76,6 +76,7 @@ console.log(productToEdit);
 
   return (
     <div className="form-container">
+      <h1> <h1> Edit form </h1></h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

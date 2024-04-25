@@ -4,24 +4,23 @@ import Pagination from "./Pagination";
 import { getProducts, deleteProduct } from "../redux/Actions";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
-import "./Table.css";
 import Search from "./Search";
+import "./Table.css";
 
 const Table = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const products = useSelector((state) => state.allProducts);
  
-console.log(products)
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(8);
+  const [productsPerPage] = useState(6);
 
   useEffect(() => {
     dispatch(getProducts());
   }, [dispatch]);
 
   if (!products || !Array.isArray(products)) {
-    return <div>No hay productos disponibles</div>;
+    return <h1>There are no products available</h1>;
   }
 
 

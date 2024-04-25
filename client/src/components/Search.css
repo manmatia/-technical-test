@@ -1,0 +1,10 @@
+.searchInput{
+    color: brown;
+    text-align: center;
+}
+
+input{
+    width: 40%;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px gray;
+}

@@ -1,6 +1,9 @@
+import "./Buttom.css"
+
 const Botom = () => {
     return (
-      <div className="d-flex justify-content-sm-center justify-content-md-center">
+    <div className="buttonHome">  
+      <div className="mr-30 d-flex flex-row flex-lg-row justify-content-lg-start justify-content-center">
         <a href="/landing" target="_self">
           <button type="button" class="btn btn-outline-primary me-3">
             Go back
@@ -12,6 +15,7 @@ const Botom = () => {
           </button>
         </a>
       </div>
+      </div>  
     );
   };
   

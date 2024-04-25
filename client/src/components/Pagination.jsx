@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Pagination.css"
 
 const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) => {
   const pageNumbers = [];
@@ -8,6 +9,7 @@ const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) =
   }
 
   return (
+  <div className='pagination'>
     <nav aria-label="Page navigation example">
       <ul className="pagination">
         <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -29,6 +31,7 @@ const Pagination = ({ currentPage, productsPerPage, totalProducts, paginate }) =
         </li>
       </ul>
     </nav>
+  </div>    
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getProductsByName } from "../redux/Actions";
+import "./Search.css";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Search = () => {
   };
 
   return (
-    <div className="search-container">
+    <div className="searchInput">
       <input
         type="text"
         value={searchTerm}

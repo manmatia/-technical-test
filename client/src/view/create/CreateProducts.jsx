@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { postProducts } from "../../redux/Actions";
-import Swal from 'sweetalert2';
 import "./CreateProducts.css";
 
 const CreateProduct = () => {

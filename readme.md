@@ -36,3 +36,9 @@ Axios: Librería para realizar peticiones HTTP.
 Bootstrap: Framework para el diseño de la interfaz de usuario.
 SweetAlert2: Biblioteca para mostrar alertas y notificaciones personalizadas.
 
+
+Instalar las dependencias:
+Usa el siguiente comando para instalar todas las dependencias del proyecto especificadas en el archivo package.json:
+
+
+npm install
